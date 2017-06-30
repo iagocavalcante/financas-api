@@ -172,6 +172,7 @@ return [
         HipsterJazzbo\Landlord\LandlordServiceProvider::class,
         L5Swagger\L5SwaggerServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
 
         /*
          * Application Service Providers...
