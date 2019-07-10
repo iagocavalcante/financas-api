@@ -10,7 +10,7 @@
         "darkaonline/l5-swagger": "5.0.2",
         "fideloper/proxy": "3.3.4",
         "fzaninotto/faker": "1.8.0",
-        "hipsterjazzbo/landlord": "2.0.6",
+        "hipsterjazzbo/landlord": "2.0.8",
         "laravel/framework": "5.4.27",
         "laravel/tinker": "1.0.1",
         "league/fractal": "0.16.0",
