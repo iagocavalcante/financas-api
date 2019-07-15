@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "mockery/mockery": "0.9.11",
-        "phpunit/phpunit": "8.2.4"
+        "phpunit/phpunit": "8.2.5"
     },
     "autoload": {
         "classmap": [
