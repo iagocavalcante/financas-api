@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23b2e0529d8def52cc0fee00642acc16",
+    "content-hash": "42edc471e3ad9302997c08cdb279fec5",
     "packages": [
         {
             "name": "barryvdh/laravel-cors",
@@ -1374,16 +1374,16 @@
         },
         {
             "name": "prettus/l5-repository",
-            "version": "2.6.35",
+            "version": "2.6.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "1bd39355c90a4ae241f0442ccb3b16508bd1ee29"
+                "reference": "c4f56cffbd23d61e16d2a8a9df0c651037313b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/1bd39355c90a4ae241f0442ccb3b16508bd1ee29",
-                "reference": "1bd39355c90a4ae241f0442ccb3b16508bd1ee29",
+                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/c4f56cffbd23d61e16d2a8a9df0c651037313b54",
+                "reference": "c4f56cffbd23d61e16d2a8a9df0c651037313b54",
                 "shasum": ""
             },
             "require": {
@@ -1394,7 +1394,7 @@
                 "illuminate/http": "~5.0|~6.0",
                 "illuminate/pagination": "~5.0|~6.0",
                 "illuminate/support": "~5.0|~6.0",
-                "prettus/laravel-validation": "1.1.*"
+                "prettus/laravel-validation": "~1.1|~1.2"
             },
             "suggest": {
                 "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
@@ -1435,25 +1435,25 @@
                 "model",
                 "repository"
             ],
-            "time": "2019-08-30T13:49:44+00:00"
+            "time": "2019-09-11T14:09:40+00:00"
         },
         {
             "name": "prettus/laravel-validation",
-            "version": "1.1.5",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/laravel-validator.git",
-                "reference": "d9eb401fb3518a890b117e83bd25a4109fcdb704"
+                "reference": "5ffa053baae31d11fa34da013b940d85c99ba253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/d9eb401fb3518a890b117e83bd25a4109fcdb704",
-                "reference": "d9eb401fb3518a890b117e83bd25a4109fcdb704",
+                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/5ffa053baae31d11fa34da013b940d85c99ba253",
+                "reference": "5ffa053baae31d11fa34da013b940d85c99ba253",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.4",
-                "illuminate/validation": "~5.4",
+                "illuminate/support": "~5.4|^6.0",
+                "illuminate/validation": "~5.4|^6.0",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -1466,16 +1466,19 @@
             "authors": [
                 {
                     "name": "Anderson Andrade",
-                    "email": "contato@andersonandra.de"
+                    "email": "contato@andersonandra.de",
+                    "homepage": "http://andersonandra.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Laravel Validation Service",
+            "homepage": "http://andersao.github.io/laravel-validation",
             "keywords": [
                 "laravel",
                 "service",
                 "validation"
             ],
-            "time": "2017-08-28T23:28:32+00:00"
+            "time": "2019-09-11T12:19:42+00:00"
         },
         {
             "name": "psr/log",
@@ -2942,8 +2945,8 @@
             "authors": [
                 {
                     "name": "Tijs Verkoyen",
-                    "role": "Developer",
-                    "email": "css_to_inline_styles@verkoyen.eu"
+                    "email": "css_to_inline_styles@verkoyen.eu",
+                    "role": "Developer"
                 }
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
@@ -2996,9 +2999,9 @@
             "authors": [
                 {
                     "name": "Sean Tymon",
-                    "role": "Developer",
                     "email": "tymon148@gmail.com",
-                    "homepage": "http://tymondesigns.com"
+                    "homepage": "http://tymondesigns.com",
+                    "role": "Developer"
                 }
             ],
             "description": "JSON Web Token Authentication for Laravel 4 and 5",
@@ -3383,18 +3386,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "role": "Developer",
-                    "email": "sebastian@phpeople.de"
+                    "email": "sebastian@phpeople.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "Developer",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
