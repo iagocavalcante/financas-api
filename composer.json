@@ -18,7 +18,7 @@
         "tymon/jwt-auth": "0.5.12"
     },
     "require-dev": {
-        "mockery/mockery": "1.2.3",
+        "mockery/mockery": "1.2.4",
         "phpunit/phpunit": "8.3.5"
     },
     "autoload": {
