@@ -12,7 +12,7 @@
         "fzaninotto/faker": "1.9.0",
         "hipsterjazzbo/landlord": "2.0.8",
         "laravel/framework": "6.6.0",
-        "laravel/tinker": "1.0.10",
+        "laravel/tinker": "2.0.0",
         "league/fractal": "0.18.0",
         "prettus/l5-repository": "2.6.36",
         "tymon/jwt-auth": "0.5.12"
