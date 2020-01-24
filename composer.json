@@ -11,7 +11,7 @@
         "fideloper/proxy": "4.2.2",
         "fzaninotto/faker": "1.9.1",
         "hipsterjazzbo/landlord": "2.0.8",
-        "laravel/framework": "6.11.0",
+        "laravel/framework": "6.12.0",
         "laravel/tinker": "2.1.0",
         "league/fractal": "0.18.0",
         "prettus/l5-repository": "2.6.40",
