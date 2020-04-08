@@ -52,7 +52,7 @@ return [
          | Enable or disable cache
          |
          */
-        'enabled'    => true,
+        'enabled'    => false,
 
         /*
          |--------------------------------------------------------------------------
@@ -202,6 +202,12 @@ return [
         |   http://prettus.local/?search=lorem&orderBy=id&sortedBy=asc
         |   http://prettus.local/?search=lorem&orderBy=id&sortedBy=desc
         |
+        | - searchJoin: Specifies the search method (AND / OR), by default the
+        |               application searches each parameter with OR
+        |   EX:
+        |   http://prettus.local/?search=lorem&searchJoin=and
+        |   http://prettus.local/?search=lorem&searchJoin=or
+        |
         */
         'params'             => [
             'search'       => 'search',
@@ -209,7 +215,9 @@ return [
             'filter'       => 'filter',
             'orderBy'      => 'orderBy',
             'sortedBy'     => 'sortedBy',
-            'with'         => 'with'
+            'with'         => 'with',
+            'searchJoin'   => 'searchJoin',
+            'withCount'    => 'withCount'
         ]
     ],
     /*
@@ -219,8 +227,9 @@ return [
     |
     */
     'generator'  => [
-        'basePath'      => app_path(),
+        'basePath'      => app()->path(),
         'rootNamespace' => 'App\\',
+        'stubsOverridePath' => app()->path(),
         'paths'         => [
             'models'       => 'Models',
             'repositories' => 'Repositories',
@@ -230,8 +239,7 @@ return [
             'validators'   => 'Validators',
             'controllers'  => 'Http/Controllers',
             'provider'     => 'RepositoryServiceProvider',
-            'criteria'     => 'Criteria',
-            'stubsOverridePath' => app_path()
+            'criteria'     => 'Criteria'
         ]
     ]
 ];

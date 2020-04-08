@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'api' => [
         /*
         |--------------------------------------------------------------------------
@@ -13,7 +12,6 @@ return [
     ],
 
     'routes' => [
-
         /*
         |--------------------------------------------------------------------------
         | Route for accessing api documentation interface
@@ -45,13 +43,13 @@ return [
          */
         'middleware' => [
             'api' => [],
+            'asset' => [],
             'docs' => [],
+            'oauth2_callback' => [],
         ],
-
     ],
 
     'paths' => [
-
         /*
         |--------------------------------------------------------------------------
         | Absolute path to location where parsed swagger annotations will be stored
@@ -70,11 +68,21 @@ return [
 
         /*
         |--------------------------------------------------------------------------
-        | Absolute path to directory containing the swagger annotations are stored.
+        | File name of the generated YAML documentation file
+        |--------------------------------------------------------------------------
+         */
+
+        'docs_yaml' => 'api-docs.yaml',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Absolute paths to directory containing the swagger annotations are stored.
         |--------------------------------------------------------------------------
         */
 
-        'annotations' => base_path('app'),
+        'annotations' => [
+            base_path('app'),
+        ],
 
         /*
         |--------------------------------------------------------------------------
@@ -91,6 +99,14 @@ return [
         */
 
         'base' => env('L5_SWAGGER_BASE_PATH', null),
+
+        /*
+        |--------------------------------------------------------------------------
+        | Edit to set path where swagger ui assets should be stored
+        |--------------------------------------------------------------------------
+        */
+
+        'swagger_ui_assets_path' => env('L5_SWAGGER_UI_ASSETS_PATH', 'vendor/swagger-api/swagger-ui/dist/'),
 
         /*
         |--------------------------------------------------------------------------
@@ -129,7 +145,25 @@ return [
                 'read:projects' => 'read your projects',
                 'write:projects' => 'modify projects in your account',
             ]
-        ],*/
+        ],
+        */
+
+        /* Open API 3.0 support
+        'passport' => [ // Unique name of security
+            'type' => 'oauth2', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
+            'description' => 'Laravel passport oauth2 security.',
+            'in' => 'header',
+            'scheme' => 'https',
+            'flows' => [
+                "password" => [
+                    "authorizationUrl" => config('app.url') . '/oauth/authorize',
+                    "tokenUrl" => config('app.url') . '/oauth/token',
+                    "refreshUrl" => config('app.url') . '/token/refresh',
+                    "scopes" => []
+                ],
+            ],
+        ],
+        */
     ],
 
     /*
@@ -138,7 +172,15 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'generate_always' => env('L5_SWAGGER_GENERATE_ALWAYS', true),
+    'generate_always' => env('L5_SWAGGER_GENERATE_ALWAYS', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Turn this on to generate a copy of documentation in yaml format
+    |--------------------------------------------------------------------------
+     */
+
+    'generate_yaml_copy' => env('L5_SWAGGER_GENERATE_YAML_COPY', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -146,7 +188,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'swagger_version' => env('SWAGGER_VERSION', '2.0'),
+    'swagger_version' => env('SWAGGER_VERSION', '3.0'),
 
     /*
     |--------------------------------------------------------------------------
@@ -186,7 +228,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Uncomment to add constants which can be used in anotations
+    | Uncomment to add constants which can be used in annotations
     |--------------------------------------------------------------------------
      */
     'constants' => [
